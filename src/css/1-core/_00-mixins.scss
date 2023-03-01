@@ -1,0 +1,39 @@
+@use "sass:math";
+@use "sass:map";
+@use "sass:string";
+
+$breakpoints: (
+  sm: 768px,
+  md: 960px,
+  lg: 1280px,
+) !default;
+$small: map.get($breakpoints, sm) !default;
+$medium: map.get($breakpoints, md) !default;
+$large: map.get($breakpoints, lg) !default;
+
+// -------------------------------------------------------------
+// mixins
+// -------------------------------------------------------------
+
+@mixin flow($font-size, $bf: $base-font, $lh: $line-height) {
+  $lh-value: $base-font * $lh;
+  $coeff: math.ceil(math.div($font-size, $lh-value));
+  $new-lh: math.div($lh-value, $font-size) * $coeff;
+  $margin-bottom: math.div($new-lh, $coeff);
+
+  margin-bottom: $margin-bottom + em;
+  font-size: math.div($font-size, 10) + rem;
+  line-height: $new-lh;
+}
+
+@function hex-to-hsl($hex) {
+  $hue: color.hue($hex);
+  $saturation: color.saturation($hex);
+  $lightness: color.lightness($hex);
+
+  @return $hue, $saturation, $lightness;
+}
+
+@function hex-rm-hash($hex) {
+  @return string.slice(#{$hex}, 2);
+}

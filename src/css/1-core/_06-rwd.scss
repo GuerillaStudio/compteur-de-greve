@@ -1,0 +1,65 @@
+// -------------------------------------------------------------
+// rwd
+// -------------------------------------------------------------
+
+// responsive iframe http://www.smashingmagazine.com/2014/02/27/making-embedded-content-work-in-responsive-design/ */
+.responsive-iframe {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding-top: 3rem;
+  padding-bottom: 56.25%;
+}
+
+.responsive-iframe iframe,
+.responsive-iframe object,
+.responsive-iframe embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// utilities
+// --------------------------------------------------------------
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: ($medium + 1)) and (max-width: $large) {
+  [class*="-lg"][class*="hidden-"]:not([class*="up"]) {
+    display: none !important;
+  }
+}
+
+@media (min-width: ($small + 1)) and (max-width: $medium) {
+  [class*="-md"][class*="hidden-"]:not([class*="up"]) {
+    display: none !important;
+  }
+}
+
+@media (max-width: $small) {
+  [class*="-sm"][class*="hidden-"]:not([class*="up"]) {
+    display: none !important;
+  }
+}
+
+@media (min-width: $large) {
+  .hidden-lg-up {
+    display: none !important;
+  }
+}
+
+@media (min-width: $medium) {
+  .hidden-md-up {
+    display: none !important;
+  }
+}
+
+@media (min-width: $small) {
+  .hidden-sm-up {
+    display: none !important;
+  }
+}

@@ -1,0 +1,29 @@
+@use "sass:math";
+
+// -------------------------------------------------------------
+// typography
+// -------------------------------------------------------------
+
+html {
+  font-size: 62.5%;
+  font-size: calc(1em * 0.625); // IE9-11 calculation fix
+}
+
+body {
+  font-size: math.div($base-font, 10) + em;
+  line-height: ($line-height + em);
+}
+
+p,
+ul,
+ol,
+dl,
+blockquote,
+pre,
+td,
+th,
+label,
+textarea,
+caption {
+  margin: 0 0 ($line-height + em) 0;
+}

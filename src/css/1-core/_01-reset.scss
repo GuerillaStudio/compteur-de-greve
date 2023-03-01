@@ -1,0 +1,48 @@
+// -------------------------------------------------------------
+// reset
+// -------------------------------------------------------------
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+img,
+table,
+td,
+blockquote,
+code,
+pre,
+textarea,
+input,
+video,
+svg {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+  border-style: none;
+  vertical-align: middle;
+}
+
+// Remove special styling on Safari iOS
+input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
