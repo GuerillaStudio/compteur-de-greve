@@ -19,9 +19,16 @@ title: Compteur de grève
 		<article>
 			<h2>Et vous&nbsp;?</h2>
 			<div class="flex flex-col">
-				<form action="/" method="post">
-					<button class="btn w100 mb15">Je fais grève</button>
-				</form>
+				<div>
+					<form action="/" method="post">
+						<button class="btn w100 mb15">Je fais grève</button>
+					</form>
+					<div class="success" v-cloak>
+						<strong class="block text-bold">Merci pour votre participation ! ✨</strong>
+						↓ Nous avons <strong>besoin de vous</strong> pour faire du <em class="text-bold">7 mars</em> une journée de mobilisation qui restera dans les mémoires
+					</div>
+					<div class="error" v-cloak>Message d'erreur à faire</div>
+				</div>
 				<a href="#" class="btn btn--secondary w100 mb15">Je partage le compteur</a>
 				<a href="#" class="btn btn--ghost w100 mb15">En savoir plus</a>
 			</div>
