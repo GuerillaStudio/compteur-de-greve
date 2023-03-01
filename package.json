@@ -4,15 +4,15 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "dev": "eleventy  --serve --port=1312",
+    "dev": "eleventy --serve --port=1312",
     "build": "eleventy",
-	"lintcss": "npx stylelint 'src/css/**/*.scss'",
-	"lintcss-autofix": "npx stylelint 'src/css/**/*.scss' --fix"
+    "lintcss": "npx stylelint 'src/css/**/*.scss'",
+    "lintcss-autofix": "npx stylelint 'src/css/**/*.scss' --fix"
   },
   "author": "Guérilla.Studio",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^2.0.0-beta.3",
+    "@11ty/eleventy": "^2.0.0",
     "@11tyrocks/eleventy-plugin-sass-lightningcss": "^1.0.0"
   },
   "devDependencies": {
