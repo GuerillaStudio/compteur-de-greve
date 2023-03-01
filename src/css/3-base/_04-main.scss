@@ -3,13 +3,24 @@
 // -----------------------------------------------------------
 
 body {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  flex-direction: column;
   accent-color: $color-1;
-  background-color: #fff;
+  background: $color-bg-1 no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1280' height='532' fill='none'%3E%3Cpath fill='url(%23a)' d='M0 0h1280v262L0 532V0Z'/%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='0' r='1' gradientTransform='matrix(1280 532 -352.4 847.9 0 0)' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='.1' stop-color='%23321D64'/%3E%3Cstop offset='.8' stop-color='%23C82E79'/%3E%3Cstop offset='.9' stop-color='%23D33238'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E");
+  background-position: 0 0;
+  background-size: 100% auto;
   color: $color-dark-text;
   font-family: $fontstack1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: 500;
   text-rendering: optimizespeed; // Fix performances issues (especially on mobile): https://marco.org/2012/11/15/text-rendering-optimize-legibility
+}
+
+.main {
+  flex: 1 0 auto;
 }
 
 // titles
@@ -20,7 +31,7 @@ h1 {
 }
 
 h2 {
-  @include flow(25);
+  @include flow(38);
 }
 
 h3 {

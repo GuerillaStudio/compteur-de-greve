@@ -1,11 +1,27 @@
 // -------------------------------------------------------------
-// colors
+// palette
 // --------------------------------------------------------------
 
-$color-1: #3498db;
-$color-2: #1abc9c;
-$color-3: #34495e;
-$color-4: #d0dada;
+$hue-purple: 258deg;
+$hue-pink: 328deg;
+$hue-yellow: 56deg;
+$color-1: hsl($hue-purple 55% 25%);
+$color-2: hsl($hue-purple 39% 40%);
+$color-3: hsl($hue-pink 93% 44%);
+$color-4: hsl($hue-yellow 100% 53%);
+
+// -------------------------------------------------------------
+// layout
+// -------------------------------------------------------------
+
+$color-bg-1: hsl(0deg 100% 99%);
+$color-gradient-1: radial-gradient(100% 100% at 0% 0%, $color-1 10.36%, #C82E79 77.03%, #D33238 94.73%);
+
+// -------------------------------------------------------------
+// utility
+// -------------------------------------------------------------
+
+
 $color-info: #2185d0;
 $color-red: #de350b;
 $color-green: $color-2;
@@ -15,24 +31,11 @@ $color-yellow: #ffdd57;
 // text
 // -------------------------------------------------------------
 
-$color-light-text: #fcfcfc;
-$color-dark-text: #000;
+$color-light-text: hsl($hue-purple 40% 99%);
+$color-dark-text: $color-1;
 
 // -------------------------------------------------------------
 // links
 // -------------------------------------------------------------
 
 $color-link: $color-1;
-
-// -------------------------------------------------------------
-// brands
-// -------------------------------------------------------------
-
-$color-twitter: #55acee;
-$color-facebook: #3b5998;
-$color-google: #dd4b39;
-$color-youtube: #e52d27;
-$color-pinterest: #cc2127;
-$color-vimeo: #1ab7ea;
-$color-linkedin: #0976b4;
-$color-instagram: #3f729b;

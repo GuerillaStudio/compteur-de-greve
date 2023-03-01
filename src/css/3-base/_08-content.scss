@@ -2,6 +2,11 @@
 // content
 // -------------------------------------------------------------
 
+.content {
+  padding: 5rem;
+  background-color: $color-bg-1;
+}
+
 .content :where(h2, h3, h4) {
   font-weight: 600;
 }

@@ -10,11 +10,20 @@
 	<meta name="robots" content="none">
 </head>
 <body>
-	<header>
-		<h1>{{ title }}</h1>
+	<header class="header">
+		{% if page.fileSlug === '' %}
+			<h1 class="header-title">#CompteurDeGrève</h1>
+		{% else %}
+			<a class="header-title" href="{{ '/' }}">#CompteurDeGrève</a>
+		{% endif %}
 	</header>
-	<main>
+	<main class="main">
 	{{ content | safe }}
 	</main>
+	<footer class="footer">
+		<div class="footer-container container">
+			<a href="/mentions-legales">Mentions légales</a>
+		</div>
+	</footer>
 </body>
 </html>
