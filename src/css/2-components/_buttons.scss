@@ -5,11 +5,11 @@
 // -------------------------------------------------------------
 
 $btn-primary: $color-1;
-$btn-secondary: $color-2;
-$btn-dark: $color-dark-text;
+$btn-secondary: $color-3;
+$btn-tertiary: $color-1;
 $btn-danger: #c53a3a;
 $btn-hover: 5%;
-$btn-radius: 0.2rem;
+$btn-radius: 0;
 $btn-border-width: 0.1rem;
 
 .btn {
@@ -27,6 +27,7 @@ $btn-border-width: 0.1rem;
   box-shadow: none;
   color: var(--color-text);
   font: inherit;
+  font-weight: 900;
   line-height: ($line-height + em);
   text-align: center;
   transition: all 0.2s;
@@ -51,9 +52,6 @@ $btn-border-width: 0.1rem;
 
 .btn--danger { --color-accent: #{$btn-danger}; }
 .btn--danger:where(:hover, :active) { --color-accent: #{color.adjust($btn-danger, $lightness: - 10%)}; }
-
-.btn--dark { --color-accent: #{$btn-dark}; }
-.btn--dark:where(:hover, :active) { --color-accent: #{color.adjust($btn-dark, $lightness: + 10%)}; }
 
 // Styles
 // --------------------------------------------------------------

@@ -11,11 +11,7 @@
 </head>
 <body>
 	<header class="header">
-		{% if page.fileSlug === '' %}
-			<h1 class="header-title">#CompteurDeGrève</h1>
-		{% else %}
-			<a class="header-title" href="{{ '/' }}">#CompteurDeGrève</a>
-		{% endif %}
+		<a class="header-title" href="{{ '/' }}">#CompteurDeGrève</a>
 	</header>
 	<main class="main">
 	{{ content | safe }}

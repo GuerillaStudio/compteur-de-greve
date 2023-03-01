@@ -1,0 +1,12 @@
+// -----------------------------------------------------------
+// == Banner with hands on the side like a protest sign
+// -----------------------------------------------------------
+
+.banner {
+  min-height: calc(70vh - 7rem);
+  min-height: calc(70dvh - 7rem);
+  padding: 6rem;
+  margin: 0 3.5rem;
+  background-color: $color-bg-1;
+  box-shadow: 0 2.2rem 2.1rem rgb(175 157 158 / 30%);
+}
