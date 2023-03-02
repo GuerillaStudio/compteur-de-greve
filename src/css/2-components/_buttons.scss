@@ -7,6 +7,7 @@
 $btn-primary: $color-purple-1;
 $btn-secondary: $color-pink-1;
 $btn-tertiary: $color-purple-1;
+$btn-light: $color-purple-4;
 $btn-danger: #c53a3a;
 $btn-hover: 5%;
 $btn-radius: 0;
@@ -33,6 +34,10 @@ $btn-border-width: 0.1rem;
   transition-duration: 0.15s;
   transition-property: background, background-color, transform, box-shadow;
   vertical-align: middle;
+}
+
+.btn[target="_blank"] {
+  cursor: alias;
 }
 
 .btn:hover,
@@ -88,8 +93,35 @@ $btn-border-width: 0.1rem;
   box-shadow: none;
 }
 
+.btn--light,
+.btn--light:link,
+.btn--light:visited {
+  padding: 2rem 4rem;
+  background-color: $btn-light;
+  box-shadow: none;
+  color: $color-purple-1;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.btn--light:hover,
+.btn--light:active {
+  background-color: color.adjust($btn-light, $lightness: - $btn-hover);
+}
+
 .btn--icoYellow svg {
   color: $color-yellow-1;
+}
+
+.btn--invisible,
+.btn--invisible:link,
+.btn--invisible:visited {
+  display: inline-flex;
+  padding: 1.5rem;
+  border: none;
+  margin: 0;
+  background: none;
+  cursor: pointer;
 }
 
 /* size

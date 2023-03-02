@@ -34,7 +34,11 @@ body {
 }
 
 .title-2 {
-  @include flow(38);
+  margin-top: 7rem;
+  margin-bottom: 2.5rem;
+  font-size: 3.8rem;
+  font-weight: 900;
+  line-height: 1.2em;
 }
 
 .title-3 {
