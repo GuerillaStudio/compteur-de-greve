@@ -32,14 +32,14 @@ permalink:
 					</form>
 					<div class="notif notif--success notif--successPlusOne" x-bind="thanks" x-cloak>
 						<strong class="block text-bold text-big mb1">Merci pour votre participation&nbsp;!&nbsp;✨</strong>
-						<span aria-hidden="true">↓</span>&nbsp;Nous avons <strong class="text-bold">besoin de vous</strong> pour faire du <em class="text-bold">7 mars</em> une journée de mobilisation qui restera dans les mémoires&nbsp;!
+						<span aria-hidden="true">↓</span>&nbsp;Nous avons <a class="text-bold" href="#partager">besoin de vous</a> pour faire du <em class="text-bold">7 mars</em> une journée de mobilisation qui restera dans les mémoires&nbsp;!
 
 					</div>
 				</div>
-				<a href="#" class="btn btn--secondary w100 mb15">
+				<a href="#partager" class="btn btn--secondary w100 mb15">
 					{% include 'icons/megaphone.svg' %} Je partage le compteur
 				</a>
-				<a href="#" class="btn btn--tertiary w100 mb15">
+				<a href="#savoir-plus" class="btn btn--tertiary w100 mb15">
 					{% include 'icons/question.svg' %} En savoir plus
 				</a>
 			</div>
@@ -47,7 +47,7 @@ permalink:
 	</div>
 </section>
 
-<section class="container text-center">
+<section class="container text-center" id="partager">
 	<h2 class="title-2">Partagez le site&nbsp;!</h2>
 
 	<div class="flex flex-wrap justify-center">
@@ -60,7 +60,7 @@ permalink:
 	</div>
 </section>
 
-<section class="container text-center">
+<section class="container text-center" id="aider">
 	<h2 class="title-2">3 actions pour aider</h2>
 	<div class="flex flex-col justify-center align-items-center">
 		<a class="btn btn--light mb25" href="" target="_blank">✉️&nbsp;<span class="text-bold">Envoyer un mail</span>aux collègues</a>
@@ -69,7 +69,7 @@ permalink:
 	</div>
 </section>
 
-<section class="container text-center">
+<section class="container text-center" id="savoir-plus">
 	<h2 class="title-2">En savoir plus</h2>
 	<div class="flex flex-col justify-center align-items-center">
 		<a class="btn btn--light mb25" href="" target="_blank">💸&nbsp;Simuler ma retraite avec la réforme</a>
