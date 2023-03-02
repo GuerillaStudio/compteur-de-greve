@@ -16,7 +16,7 @@ $notif-error: $color-red;
 // -------------------------------------------------------------
 
 .notif {
-  padding: 2rem;
+  z-index: 1;
   padding: 2rem 3rem;
   border: 0.2rem solid currentcolor;
   font-size: 1.6rem;
@@ -54,9 +54,25 @@ $notif-error: $color-red;
 
 // Special
 // --------------------------------------------------------------
+@keyframes success-shake {
+  0%,
+  100% { transform: rotate(0deg); transform-origin: 50% 50%; }
+  10% { transform: rotate(8deg); }
+
+  20%,
+  40%,
+  60% { transform: rotate(-10deg); }
+
+  30%,
+  50%,
+  70% { transform: rotate(10deg); }
+  80% { transform: rotate(-8deg); }
+  90% { transform: rotate(8deg); }
+}
 
 .notif--successPlusOne {
   position: relative;
+  animation: success-shake 1s linear both;
   transform: scale(1.1);
 }
 

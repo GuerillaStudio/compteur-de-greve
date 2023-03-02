@@ -49,6 +49,10 @@ $banner-padding: clamp(2.5rem, 5vw, 7rem);
 
 .banner-layout {
   display: grid;
+  width: 100%;
+  max-width: $container;
+  align-items: center;
+  margin: 0 auto;
   grid-template-columns: minmax(min-content, 55%) minmax(min-content, 45%);
   justify-items: center;
   row-gap: $banner-padding;
