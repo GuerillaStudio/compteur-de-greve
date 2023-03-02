@@ -34,6 +34,7 @@ async function handler(event) {
 
     return {
       statusCode: error.httpStatusCode || 500,
+	  ttl: 300,
       body: JSON.stringify(
         {
           error: error.message,
