@@ -3,33 +3,42 @@ layout: base.njk
 title: Compteur de grève
 ---
 <section class="banner" x-data="counter" data-initial-count="148563">
-	<div class="grid grid-2 gap">
-		<article class="text-center">
-			<h1 class="visually-hidden">Compteur de Grève</h1>
-			<p>
-				<span class="color-3">Contre la réforme des retraites,</span><br>
-				à l’appel de l’ensemble des organisations syndicales, le 7 mars
-				<strong class="block counter text-big text-bold" x-bind="counter">148&nbsp;563</strong>
-				<span class="separator">personnes seront</span>
-				<em class="block text-big text-bold">en grève<span class="visually-hidden"> !</span></em>
-			</p>
-
-		</article>
-		<article>
-			<h2>Et vous&nbsp;?</h2>
+	<div class="banner-layout">
+		<div>
+			<article class="counter">
+				<h1 class="visually-hidden">Compteur de Grève</h1>
+				<p>
+					<span class="color-pink-2 pb05 inline-block">Contre la réforme des retraites,</span><br>
+					À l’appel de l’ensemble des organisations syndicales, <span class="color-purple-1">le 7 mars</span>
+					<span aria-live="polite">
+						<strong class="counter-number" x-bind="counter">148&nbsp;563</strong>
+						<span class="separator">personnes seront</span>
+						<em class="counter-strikeeeee-lol highlighter-zigzag">en grève<span class="visually-hidden"> !</span></em>
+					</span>
+				</p>
+			</article>
+		</div>
+		<article class="w100 maxw380px text-center">
+			<h2 class="title-1 mt0">Et <span class="highlighter-underline">vous</span>&nbsp;?</h2>
 			<div class="flex flex-col">
-				<div>
+				<div class="notif notif--error" x-bind="eroor" x-cloak>Message d'erreur à faire</div>
+				<div class="gridstack">
 					<form action="/" method="post" x-bind="form">
-						<button class="btn w100 mb15" x-bind="button">Je fais grève</button>
+						<button class="btn btn--big btn--icoYellow w100 mb15" x-bind="button">
+							{% include 'icons/plus-one.svg' %} Je fais grève
+						</button>
 					</form>
-					<div class="success" x-bind="thanks" x-cloak>
-						<strong class="block text-bold">Merci pour votre participation ! ✨</strong>
-						↓ Nous avons <strong>besoin de vous</strong> pour faire du <em class="text-bold">7 mars</em> une journée de mobilisation qui restera dans les mémoires
+					<div class="notif notif--success" x-bind="thanks" x-cloak>
+						<strong class="block text-bold text-big mb1">Merci pour votre participation&nbsp;!&nbsp;✨</strong>
+						<span aria-hidden="true">↓</span>&nbsp;Nous avons <strong class="text-bold">besoin de vous</strong> pour faire du <em class="text-bold">7 mars</em> une journée de mobilisation qui restera dans les mémoires&nbsp;!
 					</div>
-					<div class="error" x-bind="error" x-cloak>Message d'erreur à faire</div>
 				</div>
-				<a href="#" class="btn btn--secondary w100 mb15">Je partage le compteur</a>
-				<a href="#" class="btn btn--ghost w100 mb15">En savoir plus</a>
+				<a href="#" class="btn btn--secondary w100 mb15">
+					{% include 'icons/megaphone.svg' %} Je partage le compteur
+				</a>
+				<a href="#" class="btn btn--tertiary w100 mb15">
+					{% include 'icons/question.svg' %} En savoir plus
+				</a>
 			</div>
 		</article>
 	</div>

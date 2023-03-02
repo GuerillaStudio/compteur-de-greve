@@ -26,6 +26,8 @@
 @import "2-components/_forms";
 @import "2-components/_buttons";
 @import "2-components/_notifications";
+@import "2-components/_separator";
+@import "2-components/_highlighter";
 
 // -------------------------------------------------------------
 // base
@@ -51,7 +53,7 @@
 // pages
 // -------------------------------------------------------------
 
-// @import "5-pages/...";
+@import "5-pages/counter";
 
 // -------------------------------------------------------------
 // helpers

@@ -7,8 +7,11 @@ $banner-padding: clamp(2.5rem, 5vw, 7rem);
 
 .banner {
   position: relative;
+  display: flex;
   min-height: calc(70vh - 7rem);
   min-height: calc(70dvh - 7rem);
+  flex-direction: column;
+  justify-content: center;
   padding: $banner-padding;
   margin: 0 $banner-margin-inline;
   background-color: $color-bg-1;
@@ -39,4 +42,14 @@ $banner-padding: clamp(2.5rem, 5vw, 7rem);
   background-image: url("/img/hand-right.svg");
   background-position-x: right;
   transform: translateY(-60%);
+}
+
+// Layout
+// --------------------------------------------------------------
+
+.banner-layout {
+  display: grid;
+  grid-template-columns: minmax(min-content, 55%) minmax(min-content, 45%);
+  justify-items: center;
+  row-gap: $banner-padding;
 }

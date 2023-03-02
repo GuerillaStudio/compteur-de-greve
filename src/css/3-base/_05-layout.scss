@@ -12,3 +12,26 @@
 .container--small {
   max-width: $container-small;
 }
+
+// gridstack
+// --------------------------------------------------------------
+
+.gridstack {
+  display: grid;
+}
+
+.gridstack > * {
+  position: relative;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  opacity: 1;
+}
+
+:where(.gridstack > * > *) {
+  opacity: 1;
+}
+
+.gridstack > :where([hidden], [hidden] > *) {
+  opacity: 0;
+  visibility: hidden;
+}

@@ -11,7 +11,7 @@
 
 $base-font: 18; // px value (without unit), will be converted in em
 $line-height: 1.5;
-$fontstack1: "Inter", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$fontstack1: "Inter", "Inter-fallback", arial, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, helvetica, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 // ℹ️ Emoji fonts are explicitely declared at the fontstacks end to be sure to be displayed correctely on every platforms. https://answers.microsoft.com/en-us/windows/forum/all/flag-emoji/85b163bc-786a-4918-9042-763ccf4b6c05
 

@@ -1,0 +1,21 @@
+// -----------------------------------------------------------
+// == Separator component
+// -----------------------------------------------------------
+
+.separator {
+  display: grid;
+  max-width: 95%;
+  align-items: center;
+  margin: 1rem auto;
+  gap: 2rem;
+  grid-template-columns: 1fr fit-content(90%) 1fr;
+}
+
+.separator::before,
+.separator::after {
+  display: block;
+  width: auto;
+  height: .2rem;
+  background-color: $color-purple-3;
+  content: "";
+}

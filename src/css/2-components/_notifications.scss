@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // Notification module
 // Namespace : .notif
 
@@ -15,24 +17,31 @@ $notif-error: $color-red;
 
 .notif {
   padding: 2rem;
-  border: 0.1rem solid currentcolor;
-  border-radius: 0.3rem;
+  padding: 2rem 3rem;
+  border: 0.2rem solid currentcolor;
+  font-size: 1.6rem;
+  line-height: 1.3em;
 }
 
 // Colors
 // --------------------------------------------------------------
 
 .notif--success {
-  color: $notif-success;
+  border-color: $notif-success;
+  background-color: color.adjust($notif-success, $saturation: + 21%, $lightness: + 40%);
+  color: color.adjust($notif-success, $saturation: + 8%, $lightness: - 34%);
 }
 
 .notif--warning {
   border-color: $notif-warning;
-  color: #444;
+  background-color: color.adjust($notif-warning, $saturation: + 21%, $lightness: + 40%);
+  color: color.adjust($notif-warning, $saturation: + 8%, $lightness: - 34%);
 }
 
 .notif--error {
-  color: $notif-error;
+  border-color: $notif-error;
+  background-color: color.adjust($notif-error, $saturation: + 21%, $lightness: + 40%);
+  color: color.adjust($notif-error, $saturation: + 8%, $lightness: - 34%);
 }
 
 // Sizes
@@ -40,4 +49,16 @@ $notif-error: $color-red;
 
 .notif--small {
   padding: 1rem 1.5rem;
+}
+
+// Special
+// --------------------------------------------------------------
+
+.notif--successPlusOne {
+  position: relative;
+}
+
+.notif--successPlusOne::before {
+position: absolute;
+content: "";
 }
