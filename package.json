@@ -16,7 +16,7 @@
     "@11tyrocks/eleventy-plugin-sass-lightningcss": "^1.0.0",
     "@netlify/functions": "^1.4.0",
     "alpinejs": "^3.11.1",
-    "node-fetch": "^3.3.0"
+    "node-fetch": "^2.6.9"
   },
   "devDependencies": {
     "stylelint": "^14.11.0",
