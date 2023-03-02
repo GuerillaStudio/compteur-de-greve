@@ -6,15 +6,15 @@ permalink:
 ---
 <section class="banner" x-data="counter" data-initial-count="{{count}}">
 	<div class="banner-layout">
-		<div>
+		<div class="counter-container">
 			<article class="counter">
 				<h1 class="visually-hidden">Compteur de Grève</h1>
 				<p>
-					<span class="color-pink-2 pb05 inline-block">Contre la réforme des retraites,</span><br>
+					<span class="color-pink-2 pb05 inline-block counter-content">Contre la réforme des retraites,</span><br>
 					À l’appel de l’ensemble des organisations syndicales, <span class="color-purple-1">le 7 mars</span>
 					<span aria-live="polite">
 						<strong class="counter-number" x-bind="counter">{{count | formatNumber}}</strong>
-						<span class="separator">personnes seront</span>
+						<span class="separator counter-content">personnes seront</span>
 						<em class="counter-strikeeeee-lol highlighter-zigzag">en grève<span class="visually-hidden"> !</span></em>
 					</span>
 				</p>

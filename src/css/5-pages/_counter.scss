@@ -2,14 +2,24 @@
 // == Counter "page"
 // -----------------------------------------------------------
 
+.counter-container {
+  min-width: 80%;
+}
+
 .counter {
-  width: min-content;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
   color: $color-purple-2;
   font-size: 1.8rem;
   font-size: clamp(1.4rem, 1.4vw, 1.8rem);
   font-weight: 900;
   line-height: 1.3em;
   text-align: center;
+}
+
+.counter-content {
+  max-width: 39rem;
 }
 
 .counter-number {
