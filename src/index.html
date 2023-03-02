@@ -9,7 +9,7 @@ title: Compteur de grève
 			<p>
 				<span class="color-3">Contre la réforme des retraites,</span><br>
 				à l’appel de l’ensemble des organisations syndicales, le 7 mars
-				<strong class="block counter text-big text-bold" v-text="count">148&nbsp;563</strong>
+				<strong class="block counter text-big text-bold" v-text="formattedCount">148&nbsp;563</strong>
 				<span class="separator">personnes seront</span>
 				<em class="block text-big text-bold">en grève<span class="visually-hidden"> !</span></em>
 			</p>
@@ -20,13 +20,13 @@ title: Compteur de grève
 			<div class="flex flex-col">
 				<div>
 					<form action="/" method="post" v-if="!participating" @submit="submit">
-						<button class="btn w100 mb15">Je fais grève</button>
+						<button class="btn w100 mb15" v-bind:disabled="loading">Je fais grève</button>
 					</form>
 					<div class="success" v-cloak v-if="participating">
 						<strong class="block text-bold">Merci pour votre participation ! ✨</strong>
 						↓ Nous avons <strong>besoin de vous</strong> pour faire du <em class="text-bold">7 mars</em> une journée de mobilisation qui restera dans les mémoires
 					</div>
-					<div class="error" v-cloak>Message d'erreur à faire</div>
+					<div class="error" v-cloak v-if="error">Message d'erreur à faire</div>
 				</div>
 				<a href="#" class="btn btn--secondary w100 mb15">Je partage le compteur</a>
 				<a href="#" class="btn btn--ghost w100 mb15">En savoir plus</a>
