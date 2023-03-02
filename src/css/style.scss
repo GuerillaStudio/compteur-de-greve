@@ -17,13 +17,14 @@
 @import "1-core/_04-layout";
 @import "1-core/_05-grids";
 @import "1-core/_06-rwd";
-@import "1-core/_debug";
+
+// @import "1-core/_debug";
 
 // -------------------------------------------------------------
 // components
 // -------------------------------------------------------------
 
-@import "2-components/_forms";
+// @import "2-components/_forms";
 @import "2-components/_buttons";
 @import "2-components/_notifications";
 @import "2-components/_separator";
@@ -34,12 +35,14 @@
 // -------------------------------------------------------------
 
 @import "3-base/_01-fonts";
-@import "3-base/_02-icons";
-@import "3-base/_03-grids";
+
+// @import "3-base/_02-icons";
+// @import "3-base/_03-grids";
 @import "3-base/_04-main";
 @import "3-base/_05-layout";
 @import "3-base/_06-header";
-@import "3-base/_07-navigation";
+
+// @import "3-base/_07-navigation";
 @import "3-base/_08-content";
 @import "3-base/_09-footer";
 
@@ -77,7 +80,7 @@
 // rwd
 // -------------------------------------------------------------
 
-@import "8-rwd/_rwd-large";
-@import "8-rwd/_rwd-medium";
+// @import "8-rwd/_rwd-large";
+// @import "8-rwd/_rwd-medium";
 @import "8-rwd/_rwd-small";
 @import "8-rwd/_rwd";
