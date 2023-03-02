@@ -11,3 +11,8 @@ public
 # macOS related files
 .DS_Store
 
+
+netlify/functions/serverless/*
+!netlify/functions/serverless/index.js
+netlify/functions/dynamic/*
+!netlify/functions/dynamic/index.js

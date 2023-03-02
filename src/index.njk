@@ -1,8 +1,10 @@
 ---
 layout: base.njk
 title: Compteur de grève
+permalink:
+	serverless: /
 ---
-<section class="banner" x-data="counter" data-initial-count="148563">
+<section class="banner" x-data="counter" data-initial-count="{{count}}">
 	<div class="banner-layout">
 		<div>
 			<article class="counter">
@@ -11,7 +13,7 @@ title: Compteur de grève
 					<span class="color-pink-2 pb05 inline-block">Contre la réforme des retraites,</span><br>
 					À l’appel de l’ensemble des organisations syndicales, <span class="color-purple-1">le 7 mars</span>
 					<span aria-live="polite">
-						<strong class="counter-number" x-bind="counter">148&nbsp;563</strong>
+						<strong class="counter-number" x-bind="counter">{{count}}</strong>
 						<span class="separator">personnes seront</span>
 						<em class="counter-strikeeeee-lol highlighter-zigzag">en grève<span class="visually-hidden"> !</span></em>
 					</span>
