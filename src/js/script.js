@@ -28,7 +28,8 @@ document.addEventListener('alpine:init', () => {
 		},
 
 		button: {
-			["x-bind:disabled"]: "loading"
+			["x-bind:disabled"]: "loading",
+			["x-bind:class"]: "{ 'btn--loading' : loading }"
 		},
 
 		thanks: {

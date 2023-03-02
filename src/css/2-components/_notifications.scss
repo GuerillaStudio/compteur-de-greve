@@ -72,7 +72,8 @@ $notif-error: $color-red;
 
 .notif--successPlusOne {
   position: relative;
-  animation: success-shake 1s linear both;
+  animation: success-shake 0.75s linear both;
+  animation-delay: 1s;
   transform: scale(1.1);
 }
 
