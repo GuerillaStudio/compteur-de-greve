@@ -34,7 +34,9 @@ document.addEventListener('alpine:init', () => {
 		},
 
 		thanks: {
-			["x-show"]: "participating",
+			["x-bind:data-hidden"]: "notParticipating",
+			["x-bind:aria-hidden"]: "notParticipating",
+			["x-bind:inert"]: "notParticipating",
 			["x-transition"]: null
 		},
 
@@ -44,7 +46,10 @@ document.addEventListener('alpine:init', () => {
 		},
 
 		form: {
-			["x-show"]: "notParticipating",
+			["x-bind:data-hidden"]: "participating",
+			["x-bind:aria-hidden"]: "participating",
+			["x-bind:inert"]: "participating",
+
 			["x-transition"]: null,
 			["x-on:submit"](event) {
 				event.preventDefault()
