@@ -2,14 +2,14 @@
 layout: base.njk
 title: Compteur de grève
 ---
-<section class="banner" v-scope="App({ initialCount: 148563 })" @vue:mounted="mounted" @vue:unmounted="unmounted">
+<section class="banner" x-data="counter" data-initial-count="148563">
 	<div class="grid grid-2 gap">
 		<article class="text-center">
 			<h1 class="visually-hidden">Compteur de Grève</h1>
 			<p>
 				<span class="color-3">Contre la réforme des retraites,</span><br>
 				à l’appel de l’ensemble des organisations syndicales, le 7 mars
-				<strong class="block counter text-big text-bold" v-text="formattedCount">148&nbsp;563</strong>
+				<strong class="block counter text-big text-bold" x-bind="counter">148&nbsp;563</strong>
 				<span class="separator">personnes seront</span>
 				<em class="block text-big text-bold">en grève<span class="visually-hidden"> !</span></em>
 			</p>
@@ -19,14 +19,14 @@ title: Compteur de grève
 			<h2>Et vous&nbsp;?</h2>
 			<div class="flex flex-col">
 				<div>
-					<form action="/" method="post" v-if="!participating" @submit="submit">
-						<button class="btn w100 mb15" v-bind:disabled="loading">Je fais grève</button>
+					<form action="/" method="post" x-bind="form">
+						<button class="btn w100 mb15" x-bind="button">Je fais grève</button>
 					</form>
-					<div class="success" v-cloak v-if="participating">
+					<div class="success" x-bind="thanks" x-cloak>
 						<strong class="block text-bold">Merci pour votre participation ! ✨</strong>
 						↓ Nous avons <strong>besoin de vous</strong> pour faire du <em class="text-bold">7 mars</em> une journée de mobilisation qui restera dans les mémoires
 					</div>
-					<div class="error" v-cloak v-if="error">Message d'erreur à faire</div>
+					<div class="error" x-bind="error" x-cloak>Message d'erreur à faire</div>
 				</div>
 				<a href="#" class="btn btn--secondary w100 mb15">Je partage le compteur</a>
 				<a href="#" class="btn btn--ghost w100 mb15">En savoir plus</a>
