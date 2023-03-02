@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   padding-top: 3.3rem;
-  margin-bottom: -3rem;
+  margin-bottom: clamp(-2rem, -2.5vw, -3rem);
 }
 
 .header-title,
@@ -19,6 +19,7 @@
   box-shadow: 0 0.4rem 0.4rem rgb(150 152 156 / 61%);
   color: $color-purple-1;
   font-size: 2.6rem;
+  font-size: clamp(1.8rem, 2vw, 2.6rem);
   font-weight: 900;
   line-height: 1.19em;
   transform: rotate(-0.5deg);

@@ -27,6 +27,7 @@ $btn-border-width: 0.1rem;
   color: #fff;
   font: inherit;
   font-size: 1.9rem;
+  font-size: clamp(1.5rem, 2vw, 1.89rem);
   font-weight: 900;
   gap: 0.5em;
   line-height: ($line-height + em);
@@ -97,11 +98,14 @@ $btn-border-width: 0.1rem;
 .btn--light:link,
 .btn--light:visited {
   padding: 2rem 4rem;
+  padding: clamp(1.5rem, 2vw, 2rem) clamp(2rem, 3.1vw, 4rem);
   background-color: $btn-light;
   box-shadow: none;
   color: $color-purple-1;
   font-size: 2.4rem;
+  font-size: clamp(1.6rem, 1.8vw, 2.4rem);
   font-weight: 500;
+  line-height: 1.3em;
 }
 
 .btn--light:hover,
@@ -118,10 +122,17 @@ $btn-border-width: 0.1rem;
 .btn--invisible:visited {
   display: inline-flex;
   padding: 1.5rem;
+  padding: clamp(0.8rem, 2vw, 1.5rem);
   border: none;
   margin: 0;
   background: none;
   cursor: pointer;
+}
+
+.btn--invisible svg {
+  width: 4.2rem;
+  width: clamp(3.5rem, 5vw, 4.2rem);
+  height: auto;
 }
 
 /* size
@@ -129,5 +140,6 @@ $btn-border-width: 0.1rem;
 
 .btn--big {
   font-size: 3.8rem;
+  font-size: clamp(2.5rem, 3.8vw, 3.8rem);
   line-height: 1.15em;
 }

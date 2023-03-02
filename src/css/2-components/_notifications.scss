@@ -20,6 +20,7 @@ $notif-error: $color-red;
   padding: 2rem 3rem;
   border: 0.2rem solid currentcolor;
   font-size: 1.6rem;
+  font-size: clamp(1.3rem, 1.3vw, 1.6rem);
   line-height: 1.3em;
 }
 

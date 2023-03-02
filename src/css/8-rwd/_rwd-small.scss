@@ -2,5 +2,31 @@
 // rwd small
 // -------------------------------------------------------------
 
-// @media (max-width: $small) {
-// }
+@media (max-width: $small) {
+  .banner-layout {
+    display: block;
+  }
+
+  .banner-layout > * {
+    width: 100%;
+  }
+
+  .counter {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+  }
+
+  .counter-number {
+    line-height: 1.5em;
+  }
+
+  .counter-strikeeeee-lol {
+    margin-bottom: 2rem;
+  }
+
+  .counter-number + .separator {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

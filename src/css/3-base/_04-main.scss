@@ -33,15 +33,18 @@ body {
 .title-1 {
   color: $color-purple-1;
   font-size: 4.8rem;
+  font-size: clamp(3.7rem, 3.5vw, 4.8rem);
   font-weight: 900;
   line-height: 1.2em;
 }
 
 .title-2 {
   padding-top: 7rem;
+  padding-top: clamp(4rem, 5vw, 7rem);
   margin-top: 0;
-  margin-bottom: 3rem;
+  margin-bottom: clamp(2rem, 2.3vw, 3rem);
   font-size: 3.8rem;
+  font-size: clamp(2.5rem, 4.3vw, 3.8rem);
   font-weight: 900;
   line-height: 1.2em;
 }
