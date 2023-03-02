@@ -24,13 +24,13 @@ permalink:
 			<h2 class="title-1 mt0">Et <span class="highlighter-underline">vous</span>&nbsp;?</h2>
 			<div class="flex flex-col">
 				<div class="notif notif--error" x-bind="error" x-cloak>Message d'erreur à faire</div>
-				<div class="gridstack">
+				<div class="gridstack mb15">
 					<form action="/" method="post" x-bind="form">
-						<button class="btn btn--big btn--icoYellow w100 mb15" x-bind="button">
+						<button class="btn btn--big btn--icoYellow w100" x-bind="button">
 							{% include 'icons/plus-one.svg' %} Je fais grève
 						</button>
 					</form>
-					<div class="notif notif--success" x-bind="thanks" x-cloak>
+					<div class="notif notif--success notif--successPlusOne" x-bind="thanks" x-cloak>
 						<strong class="block text-bold text-big mb1">Merci pour votre participation&nbsp;!&nbsp;✨</strong>
 						<span aria-hidden="true">↓</span>&nbsp;Nous avons <strong class="text-bold">besoin de vous</strong> pour faire du <em class="text-bold">7 mars</em> une journée de mobilisation qui restera dans les mémoires&nbsp;!
 					</div>
