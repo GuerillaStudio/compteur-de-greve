@@ -5,9 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ title }}</title>
 	<link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+	<link rel="preload" href="{{ '/css/style.css' | url }}" as="style" />
 	<style>[v-cloak] { display: none; }</style>
 	<script type="module" src="{{ '/js/script.js' | url }}"></script>
+	<link rel="preload" href="{{ '/js/script.js' | url }}" as="script" />
 
+	{% include 'preload-assets.njk' %}
 	{% include 'favicons.njk' %}
 	<!-- TODO: REMOVE IN PROD, but safer to have it for now -->
 	<meta name="robots" content="none">
