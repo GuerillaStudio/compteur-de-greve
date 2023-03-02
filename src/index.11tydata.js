@@ -1,3 +1,5 @@
-module.exports = function() {
-	return Promise.resolve({count: 69420})
+module.exports = async function() {
+	const response = await fetch("https://c.compteurdegreve.fr/val")
+	const data = await response.json()
+	return {count: data.value}
 }

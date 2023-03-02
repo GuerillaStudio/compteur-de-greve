@@ -18,6 +18,8 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/js/**/*.js")
 	eleventyConfig.addPassthroughCopy({ "static": "/" })
 
+	eleventyConfig.addFilter("formatNumber", number => number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+
 	return {
 		htmlTemplateEngine: "njk",
 		dir: {

@@ -1,5 +1,3 @@
-let internalCount = 0
-
 document.addEventListener('alpine:init', () => {
 	Alpine.data('counter', () => ({
 		count: null,
@@ -57,7 +55,8 @@ document.addEventListener('alpine:init', () => {
 				this.loading = true
 				this.errored = false
 
-				incrementCount().then(() => {
+				incrementCount().then((newCount) => {
+					this.count = newCount
 					this.participating = true
 				}).catch((error) => {
 					this.errored = true
@@ -105,7 +104,7 @@ function subscribeCount(onCount) {
 	function execute() {
 		fetchCount().then(newCount => {
 			if (!unsubscribed) {
-				timeoutId = setTimeout(execute, 2000)
+				timeoutId = setTimeout(execute, 5000)
 				onCount(newCount)
 			}
 		})
@@ -122,35 +121,14 @@ function subscribeCount(onCount) {
 	}
 }
 
-
-
-// fake api
 function fetchCount() {
-	return wait(1000).then(() => {
-		internalCount += randomInt(0, 9)
-		return internalCount
-	})
-
+	return fetch("https://c.compteurdegreve.fr/val")
+		.then(res => res.json())
+		.then(data => data.value)
 }
 
 function incrementCount() {
-	return wait(1000).then(() => {
-		if (!randomInt(0, 1)) {
-			throw new Error()
-		}
-
-		internalCount += 1 + randomInt(0, 9)
-		return internalCount
-	})
-}
-
-
-function wait(ms) {
-	return new Promise(res => setTimeout(res, ms))
-}
-
-function randomInt(min, max) {
-	min = Math.ceil(min)
-	max = Math.floor(max)
-	return Math.floor(Math.random() * (max - min + 1)) + min
+	return fetch("https://c.compteurdegreve.fr/incr", { method: "POST", mode: "cors", credentials: "include"})
+		.then(res => res.json())
+		.then(data => data.value)
 }
