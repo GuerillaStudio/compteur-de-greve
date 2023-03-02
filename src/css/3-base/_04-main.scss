@@ -78,15 +78,3 @@ button {
 :where(ul, ol)[role="list"] {
   list-style: none;
 }
-
-// divers
-// --------------------------------------------------------------
-
-hr {
-  display: block;
-  height: 0.1rem;
-  padding: 0;
-  border: 0;
-  border-top: 0.1rem solid #ccc;
-  margin: 1em 0;
-}

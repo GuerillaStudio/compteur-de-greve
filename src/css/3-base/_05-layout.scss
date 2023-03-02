@@ -27,11 +27,12 @@
   opacity: 1;
 }
 
-:where(.gridstack > * > *) {
+.gridstack > * > * {
   opacity: 1;
 }
 
-.gridstack > :where([hidden], [hidden] > *) {
+.gridstack > [hidden],
+.gridstack > [hidden] > * {
   opacity: 0;
   visibility: hidden;
 }
