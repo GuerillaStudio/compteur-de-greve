@@ -67,22 +67,26 @@ document.addEventListener('alpine:init', () => {
 })
 
 function animateRange(duration, start, end, callback) {
-	let startTimestamp = null;
+	if (matchMedia("(prefers-reduced-motion)").matches) {
+		callback(end)
+	} else {
+		let startTimestamp = null;
 
-	const step = (timestamp) => {
-		if (!startTimestamp) {
-			startTimestamp = timestamp
+		const step = (timestamp) => {
+			if (!startTimestamp) {
+				startTimestamp = timestamp
+			};
+
+			const progress = Math.min((timestamp - startTimestamp) / duration, 1)
+			callback(Math.floor(progress * (end - start) + start))
+
+			if (progress < 1) {
+				requestAnimationFrame(step)
+			}
 		};
 
-		const progress = Math.min((timestamp - startTimestamp) / duration, 1)
-		callback(Math.floor(progress * (end - start) + start))
-
-		if (progress < 1) {
-			requestAnimationFrame(step)
-		}
-	};
-
-	requestAnimationFrame(step);
+		requestAnimationFrame(step)
+	}
 }
 
 function formatNumber(number) {
