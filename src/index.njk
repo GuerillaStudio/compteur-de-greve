@@ -33,6 +33,7 @@ permalink:
 					<div class="notif notif--success notif--successPlusOne" x-bind="thanks" x-cloak>
 						<strong class="block text-bold text-big mb1">Merci pour votre participation&nbsp;!&nbsp;✨</strong>
 						<span aria-hidden="true">↓</span>&nbsp;Nous avons <strong class="text-bold">besoin de vous</strong> pour faire du <em class="text-bold">7 mars</em> une journée de mobilisation qui restera dans les mémoires&nbsp;!
+
 					</div>
 				</div>
 				<a href="#" class="btn btn--secondary w100 mb15">
@@ -45,3 +46,7 @@ permalink:
 		</article>
 	</div>
 </section>
+
+{% if eleventy.serverless %}
+<h1>SERVERLESS !</h1>
+{% endif %}
