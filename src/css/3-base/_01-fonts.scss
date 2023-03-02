@@ -2,62 +2,60 @@
 // == Webfonts
 // -----------------------------------------------------------
 
-
-
 @font-face {
   font-display: optional;
   font-family: Inter;
   font-weight: normal;
-  src: local("Inter Medium"),
-       local("Inter"),
-       url("/fonts/Inter-Medium.woff2") format("woff2"),
-       url("/fonts/Inter-Medium.woff") format("woff");
+  src:
+    local("Inter Medium"),
+    local("Inter"),
+    url("/fonts/Inter-Medium.woff2") format("woff2"),
+    url("/fonts/Inter-Medium.woff") format("woff");
 }
-
 
 @font-face {
   font-display: optional;
   font-family: Inter;
   font-weight: 900;
-  src: local("Inter Black"),
-       local("Inter"),
-       url("/fonts/Inter-Black.woff2") format("woff2"),
-       url("/fonts/Inter-Black.woff") format("woff");
+  src:
+    local("Inter Black"),
+    local("Inter"),
+    url("/fonts/Inter-Black.woff2") format("woff2"),
+    url("/fonts/Inter-Black.woff") format("woff");
 }
-
 
 @font-face {
   font-display: optional;
   font-family: Inter;
   font-weight: bold;
-  src: local("Inter Black"),
-       local("Inter"),
-       url("/fonts/Inter-Black.woff2") format("woff2"),
-       url("/fonts/Inter-Black.woff") format("woff");
+  src:
+    local("Inter Black"),
+    local("Inter"),
+    url("/fonts/Inter-Black.woff2") format("woff2"),
+    url("/fonts/Inter-Black.woff") format("woff");
 }
-
 
 // Fallback trick to reduce visual shift
 // --------------------------------------------------------------
 
 @font-face {
-  font-family:Inter-fallback;
-  size-adjust:107%;
+  font-family: Inter-fallback;
+  size-adjust: 107%;
   src: local("Arial Medium"), local("Arial");
- }
+}
 
 @font-face {
   ascent-override: 105%;
-  font-family:Inter-fallback;
+  font-family: Inter-fallback;
   font-weight: bold;
-  size-adjust:101%;
-  src:local("Arial Black"), local("Arial");
- }
+  size-adjust: 101%;
+  src: local("Arial Black"), local("Arial");
+}
 
 @font-face {
   ascent-override: 105%;
-  font-family:Inter-fallback;
+  font-family: Inter-fallback;
   font-weight: 900;
-  size-adjust:101%;
-  src:local("Arial Black"), local("Arial");
- }
+  size-adjust: 101%;
+  src: local("Arial Black"), local("Arial");
+}

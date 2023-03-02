@@ -2,7 +2,7 @@
 // == Banner with hands on the side like a protest sign
 // -----------------------------------------------------------
 
-$banner-margin-inline: clamp(.5rem, 2vw, 4rem);
+$banner-margin-inline: clamp(0.5rem, 2vw, 4rem);
 $banner-padding: clamp(2.5rem, 5vw, 7rem);
 
 .banner {

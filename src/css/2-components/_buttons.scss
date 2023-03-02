@@ -18,22 +18,22 @@ $btn-border-width: 0.1rem;
   justify-content: center;
   padding: 0.8em 1.6em;
   border: $btn-border-width solid transparent;
-  border-radius: $btn-radius;
   margin: 0;
   background-color: $btn-primary;
+  border-radius: $btn-radius;
   box-shadow: none;
-  box-shadow: .5rem .5rem 0 0 color.adjust($btn-primary, $saturation: -30%, $lightness: -10%);
+  box-shadow: 0.5rem 0.5rem 0 0 color.adjust($btn-primary, $saturation: -30%, $lightness: -10%);
   color: #fff;
   font: inherit;
   font-size: 1.9rem;
-  font-weight: 900; gap: .5em;
+  font-weight: 900;
+  gap: 0.5em;
   line-height: ($line-height + em);
   text-align: center;
   transition-duration: 0.15s;
   transition-property: background, background-color, transform, box-shadow;
   vertical-align: middle;
 }
-
 
 .btn:hover,
 .btn:active {
@@ -42,7 +42,7 @@ $btn-border-width: 0.1rem;
 
 .btn:active {
   box-shadow: none;
-  transform: translate(.5rem, .5rem);
+  transform: translate(0.5rem, 0.5rem);
 }
 
 .btn svg {
@@ -52,12 +52,11 @@ $btn-border-width: 0.1rem;
 /* colors
 -------------------------------------------------------------- */
 
-
 .btn--secondary,
 .btn--secondary:link,
 .btn--secondary:visited {
   background-color: $btn-secondary;
-  box-shadow: .5rem .5rem 0 0 color.adjust($btn-secondary, $saturation: -30%, $lightness: -10%);
+  box-shadow: 0.5rem 0.5rem 0 0 color.adjust($btn-secondary, $saturation: -30%, $lightness: -10%);
   color: #fff;
 }
 
@@ -75,7 +74,7 @@ $btn-border-width: 0.1rem;
 .btn--tertiary:visited {
   border-color: $btn-tertiary;
   background-color: $color-bg-1;
-  box-shadow: .5rem .5rem 0 0 color.adjust($color-purple-3, $lightness: + 15%);
+  box-shadow: 0.5rem 0.5rem 0 0 color.adjust($color-purple-3, $lightness: + 15%);
   color: $btn-tertiary;
 }
 
@@ -86,7 +85,7 @@ $btn-border-width: 0.1rem;
 }
 
 .btn--tertiary:active {
- box-shadow: none;
+  box-shadow: none;
 }
 
 .btn--icoYellow svg {
