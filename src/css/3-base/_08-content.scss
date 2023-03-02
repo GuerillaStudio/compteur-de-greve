@@ -4,6 +4,7 @@
 
 .content {
   padding: 5rem;
+  padding: clamp(2rem, 3.5vw, 5rem);
   background-color: $color-bg-1;
 }
 
