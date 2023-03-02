@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.setServerPassthroughCopyBehavior("passthrough")
 	eleventyConfig.addPassthroughCopy("src/js/**/*.js")
+	eleventyConfig.addPassthroughCopy({ "static": "/" })
 
 	return {
 		htmlTemplateEngine: "njk",

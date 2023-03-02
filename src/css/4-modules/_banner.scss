@@ -2,11 +2,41 @@
 // == Banner with hands on the side like a protest sign
 // -----------------------------------------------------------
 
+$banner-margin-inline: clamp(.5rem, 2vw, 4rem);
+$banner-padding: clamp(2.5rem, 5vw, 7rem);
+
 .banner {
+  position: relative;
   min-height: calc(70vh - 7rem);
   min-height: calc(70dvh - 7rem);
-  padding: 6rem;
-  margin: 0 3.5rem;
+  padding: $banner-padding;
+  margin: 0 $banner-margin-inline;
   background-color: $color-bg-1;
   box-shadow: 0 2.2rem 2.1rem rgb(175 157 158 / 30%);
+}
+
+.banner::before,
+.banner::after {
+  position: absolute;
+  top: 50%;
+  width: calc($banner-margin-inline * 1.5 + $banner-padding);
+  height: 50%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  content: "";
+}
+
+.banner::before {
+  left: calc($banner-margin-inline * -1);
+  background-image: url("/img/hand-left.svg");
+  background-position-x: left;
+  transform: translateY(-45%);
+}
+
+.banner::after {
+  right: calc($banner-margin-inline * -1);
+  background-image: url("/img/hand-right.svg");
+  background-position-x: right;
+  transform: translateY(-60%);
 }
