@@ -1,10 +1,8 @@
 ---
 layout: base.njk
 title: Compteur de grève
-permalink:
-    serverless: /
 ---
-<section class="banner" x-data="counter" data-initial-count="{{count}}">
+<section class="banner">
 	<div class="banner-layout">
 		<div class="counter-container">
 			<article class="counter">
@@ -13,32 +11,23 @@ permalink:
 					<span class="color-pink-2 pb05 inline-block counter-content">Contre la réforme des retraites,</span><br>
 					À l’appel de l’ensemble des organisations syndicales, <span class="color-purple-1">le 7 mars</span>
 					<span aria-live="polite">
-						<strong class="counter-number" x-bind="counter">{{count | formatNumber}}</strong>
-						<span class="separator counter-content">personnes seront</span>
+						<strong class="counter-number">{{count | formatNumber}}</strong>
+						<span class="separator counter-content">personnes étaient</span>
 						<em class="counter-strikeeeee-lol highlighter-zigzag">en grève<span class="visually-hidden"> !</span></em>
 					</span>
 				</p>
 			</article>
 		</div>
 		<article class="w100 maxw380px sm:maxw100 text-center">
-			<h2 class="title-1 mt0">Et <span class="highlighter-underline">vous</span>&nbsp;?</h2>
+			<h2 class="title-1 mt0 visually-hidden">Et <span class="highlighter-underline">vous</span>&nbsp;?</h2>
 			<div class="flex flex-col">
-				{# <div class="notif notif--error mb2" x-bind="error" x-cloak>Message d'erreur à faire</div> #}
-				<div class="gridstack mb15">
-					<form action="/" method="post" class="flex" x-bind="form">
-						<button class="btn btn--big btn--icoYellow w100" x-bind="button">
-							{% include 'icons/plus-one.svg' %} Je fais grève
-						</button>
-					</form>
-					<div class="notif notif--success notif--successPlusOne" x-bind="thanks" x-cloak>
-						<strong class="block text-bold text-big mb1">Merci pour votre participation&nbsp;!&nbsp;✨</strong>
-						<span aria-hidden="true">↓</span>&nbsp;Nous avons <a class="text-bold text-underline" href="#partager">besoin de vous</a> pour faire du <em class="text-bold">7 mars</em> une journée de mobilisation qui restera dans les mémoires&nbsp;!
-
-					</div>
+				<div class="notif notif--success mb15">
+					<p>
+						<strong class="block text-bold text-big mb1">Merci pour votre participation&nbsp;!&nbsp;<span aria-hidden="true">✨</span></strong>
+						Le 6 mais est passé mais le site est toujours là avec avec <span aria-hidden="true">↓</span><a class="text-bold text-underline" href="#savoir-plus">ses ressources</a> si besoin.
+					</p>
+					<p class="mb0">À très bientôt pour les prochaines mobilisations&nbsp;! <span aria-hidden="true">✊</span></p>
 				</div>
-				<a href="#partager" class="btn btn--secondary w100 mb15">
-					{% include 'icons/megaphone.svg' %} Je partage le compteur
-				</a>
 				<a href="#savoir-plus" class="btn btn--tertiary w100 mb15">
 					{% include 'icons/question.svg' %} En savoir plus
 				</a>
@@ -65,7 +54,7 @@ permalink:
 	<div class="flex flex-col justify-center align-items-center">
 		<a class="btn btn--light mb25 md:w100" href="https://formdivers.typeform.com/to/rcucJg13" target="_blank">✉️&nbsp;<span><span class="text-bold">Envoyer un mail</span> aux collègues</span></a>
 		<a class="btn btn--light mb25 md:w100" href="https://www.change.org/p/retraites-non-%C3%A0-cette-r%C3%A9forme-injuste-et-brutale-reformesdesretraites" target="_blank">✒️&nbsp;<span><span class="text-bold">Signer</span> la pétition</span></a>
-		<a class="btn btn--light mb25 md:w100" href="https://www.leetchi.com/c/solidarite-cgt-mobilisation" target="_blank">❤&nbsp;<span><span class="text-bold">Faire un don</span> à une caisse de grève</span></a>
+		<a class="btn btn--light mb25 md:w100" href="https://caissedegreve.fr/" target="_blank">❤&nbsp;<span><span class="text-bold">Faire un don</span> à une caisse de grève</span></a>
 	</div>
 </section>
 

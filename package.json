@@ -13,10 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^2.0.0",
-    "@11tyrocks/eleventy-plugin-sass-lightningcss": "^1.0.0",
-    "@netlify/functions": "^1.4.0",
-    "alpinejs": "^3.11.1",
-    "node-fetch": "^2.6.9"
+    "@11tyrocks/eleventy-plugin-sass-lightningcss": "^1.0.0"
   },
   "devDependencies": {
     "stylelint": "^14.11.0",
